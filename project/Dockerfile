@@ -6,11 +6,10 @@ COPY techtrends/ /app
 WORKDIR /app
 
 # use pip to install any application dependencies 
-RUN pip install -U pip && \
-	pip install -r requirements.txt
+RUN pip install -r requirements.txt
+RUN python init_db.py 
 
-ENV PORT 3111
-EXPOSE ${PORT}
+EXPOSE 3111
 
 # execute command  on the container start
-CMD python init_db.py ; python app.py
+CMD ["python" , "app.py"]
