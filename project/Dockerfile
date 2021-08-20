@@ -2,8 +2,8 @@ FROM python:3.9
 LABEL maintainer="Ailine Lim"
 
 # Copy local code to the container image.
-COPY ./ app
-WORKDIR /app
+#COPY ./ app
+#WORKDIR /app
 
 # use pip to install any application dependencies 
 RUN pip install -U pip && \
