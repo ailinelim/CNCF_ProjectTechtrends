@@ -126,13 +126,15 @@ def create():
 if __name__ == "__main__":
    ## stream logs to app.log file
    logger = logging.getLogger("__name__")
-   logging.basicConfig(filename='app.log',level=logging.DEBUG, format=f'%(levelname)s %(name)s [%(asctime)s] : %(message)s')
-   logging.debug('This will get logged')
+   logger.setLevel(logging.DEBUG)
+   # set logger to handle STDOUT and STDERR 
    h1 = logging.StreamHandler(sys.stdout)
    h1.setLevel(logging.DEBUG)
    h2 = logging.StreamHandler(sys.stderr)
    h2.setLevel(logging.ERROR)
-   
-   logger.addHandler(h1)
-   logger.addHandler(h2)
+   handlers = [h1, h2]
+  
+   logging.basicConfig(filename='app.log',level=logging.DEBUG, handlers=handlers, format=f'%(levelname)s %(name)s [%(asctime)s] : %(message)s')
+   logging.debug('This will get logged')
+    
    app.run(host='0.0.0.0', port='3111')
