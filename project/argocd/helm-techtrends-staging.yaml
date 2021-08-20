@@ -15,5 +15,3 @@ spec:
     path: project\helm
     repoURL: https://github.com/ailinelim/CNCF_ProjectTechtrends
     targetRevision: HEAD
-  # Sync policy
-  syncPolicy: {}
