@@ -2,12 +2,12 @@ FROM python:3.9
 LABEL maintainer="Ailine Lim"
 
 # Copy local code to the container image.
-COPY ./ app
+COPY techtrends/ /app
 WORKDIR /app
 
 # use pip to install any application dependencies 
 RUN pip install -U pip && \
-	pip install -r .requirements.txt
+	pip install -r requirements.txt
 
 ENV PORT 3111
 EXPOSE ${PORT}
