@@ -39,10 +39,10 @@ spec:
           containerPort: 3111
           hostPort: 3111
         livenessProbe:
-            httpGet:
-                path: /healthz
-                port: liveness-port
+          httpGet:
+            path: /healthz
+            port: liveness-port
         readinessProbe:
-            httpGet:
-                path: /healthz
-                port: liveness-port
+          httpGet:
+            path: /healthz
+            port: liveness-port
