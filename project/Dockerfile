@@ -7,7 +7,7 @@ WORKDIR /app
 
 # use pip to install any application dependencies 
 RUN pip install -U pip && \
-	pip install -r ./project/techtrends/requirements.txt
+	pip install -r ./techtrends/requirements.txt
 
 ENV PORT 3111
 EXPOSE ${PORT}
