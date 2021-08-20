@@ -134,7 +134,9 @@ if __name__ == "__main__":
    h2.setLevel(logging.ERROR)
    handlers = [h1, h2]
   
-   logging.basicConfig(filename='app.log',level=logging.DEBUG, handlers=handlers, format=f'%(levelname)s %(name)s [%(asctime)s] : %(message)s')
+   # logging.basicConfig(filename='app.log',level=logging.DEBUG, format=f'%(levelname)s %(name)s [%(asctime)s] : %(message)s')
+   logging.basicConfig(format=f'%(levelname)s %(name)s [%(asctime)s] : %(message)s',level=logging.DEBUG, handlers=handlers)
    logging.debug('This will get logged')
     
    app.run(host='0.0.0.0', port='3111')
+
