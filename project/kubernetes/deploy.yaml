@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: web
+    app: techtrends
     tag: techtrends
   name: techtrends
   namespace: sandbox
@@ -10,7 +10,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: web
+      app: techtrends
       tag: techtrends
   strategy:
     rollingUpdate:
@@ -20,10 +20,10 @@ spec:
   template:
     metadata:
       labels:
-        app: web
+        app: techtrends
         tag: techtrends
-    spec:
-      containers:
+    spec:      
+     containers:
       - image: ailinelim/techtrends:latest
         imagePullPolicy: IfNotPresent
         name: techtrends
