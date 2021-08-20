@@ -40,3 +40,51 @@ INFO werkzeug [2021-08-18 11:32:32,146] : 127.0.0.1 - - [18/Aug/2021 11:32:32] "
 INFO app [2021-08-18 11:32:38,075] : Healthz Status request successfull
 INFO werkzeug [2021-08-18 11:32:38,076] : 127.0.0.1 - - [18/Aug/2021 11:32:38] "GET /healthz HTTP/1.1" 404 -
 INFO werkzeug [2021-08-18 11:33:22,784] : 127.0.0.1 - - [18/Aug/2021 11:33:22] "GET / HTTP/1.1" 200 -
+DEBUG root [2021-08-18 03:35:25,724] : This will get logged
+INFO werkzeug [2021-08-18 03:35:25,726] :  * Running on http://0.0.0.0:6111/ (Press CTRL+C to quit)
+DEBUG root [2021-08-18 03:37:05,669] : This will get logged
+INFO werkzeug [2021-08-18 03:37:05,671] :  * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+INFO werkzeug [2021-08-18 03:37:06,428] : 172.17.0.1 - - [18/Aug/2021 03:37:06] "GET / HTTP/1.1" 200 -
+INFO werkzeug [2021-08-18 03:37:22,004] : 172.17.0.1 - - [18/Aug/2021 03:37:22] "GET /1 HTTP/1.1" 200 -
+INFO werkzeug [2021-08-18 03:37:23,724] : 172.17.0.1 - - [18/Aug/2021 03:37:23] "GET / HTTP/1.1" 200 -
+INFO app [2021-08-18 03:37:28,485] : Metrics request successful
+INFO werkzeug [2021-08-18 03:37:28,485] : 172.17.0.1 - - [18/Aug/2021 03:37:28] "GET /metrics HTTP/1.1" 200 -
+INFO app [2021-08-18 03:37:40,579] : Healthz Status request successfull
+INFO werkzeug [2021-08-18 03:37:40,579] : 172.17.0.1 - - [18/Aug/2021 03:37:40] "GET /healthz HTTP/1.1" 200 -
+INFO werkzeug [2021-08-18 03:37:52,858] : 172.17.0.1 - - [18/Aug/2021 03:37:52] "GET / HTTP/1.1" 200 -
+INFO app [2021-08-18 03:38:50,955] : Metrics request successful
+INFO werkzeug [2021-08-18 03:38:50,956] : 172.17.0.1 - - [18/Aug/2021 03:38:50] "GET /metrics HTTP/1.1" 200 -
+INFO werkzeug [2021-08-18 03:38:55,076] : 172.17.0.1 - - [18/Aug/2021 03:38:55] "GET /3 HTTP/1.1" 200 -
+INFO werkzeug [2021-08-18 03:38:55,136] : 172.17.0.1 - - [18/Aug/2021 03:38:55] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO app [2021-08-18 03:38:58,811] : Metrics request successful
+INFO werkzeug [2021-08-18 03:38:58,812] : 172.17.0.1 - - [18/Aug/2021 03:38:58] "GET /metrics HTTP/1.1" 200 -
+INFO app [2021-08-18 03:39:03,326] : Healthz Status request successfull
+INFO werkzeug [2021-08-18 03:39:03,326] : 172.17.0.1 - - [18/Aug/2021 03:39:03] "GET /healthz HTTP/1.1" 200 -
+INFO werkzeug [2021-08-18 03:39:06,132] : 172.17.0.1 - - [18/Aug/2021 03:39:06] "GET /8 HTTP/1.1" 404 -
+INFO werkzeug [2021-08-18 03:39:06,163] : 172.17.0.1 - - [18/Aug/2021 03:39:06] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO app [2021-08-18 03:39:08,753] : Metrics request successful
+INFO werkzeug [2021-08-18 03:39:08,754] : 172.17.0.1 - - [18/Aug/2021 03:39:08] "GET /metrics HTTP/1.1" 500 -
+INFO app [2021-08-18 03:40:05,465] : Healthz Status request successfull
+INFO werkzeug [2021-08-18 03:40:05,466] : 172.17.0.1 - - [18/Aug/2021 03:40:05] "GET /healthz HTTP/1.1" 404 -
+INFO werkzeug [2021-08-18 03:41:30,972] : 172.17.0.1 - - [18/Aug/2021 03:41:30] "GET / HTTP/1.1" 200 -
+INFO werkzeug [2021-08-18 03:41:45,904] : 172.17.0.1 - - [18/Aug/2021 03:41:45] "GET /create HTTP/1.1" 200 -
+INFO app [2021-08-18 03:42:34,875] : -New post title Kubernetes Community created!
+INFO werkzeug [2021-08-18 03:42:34,876] : 172.17.0.1 - - [18/Aug/2021 03:42:34] "POST /create HTTP/1.1" 302 -
+INFO werkzeug [2021-08-18 03:42:34,882] : 172.17.0.1 - - [18/Aug/2021 03:42:34] "GET / HTTP/1.1" 200 -
+INFO werkzeug [2021-08-18 03:43:40,428] : 172.17.0.1 - - [18/Aug/2021 03:43:40] "GET /7 HTTP/1.1" 200 -
+INFO app [2021-08-18 03:43:44,864] : Metrics request successful
+INFO werkzeug [2021-08-18 03:43:44,865] : 172.17.0.1 - - [18/Aug/2021 03:43:44] "GET /metrics HTTP/1.1" 200 -
+INFO app [2021-08-18 03:43:49,145] : Healthz Status request successfull
+INFO werkzeug [2021-08-18 03:43:49,146] : 172.17.0.1 - - [18/Aug/2021 03:43:49] "GET /healthz HTTP/1.1" 200 -
+INFO werkzeug [2021-08-18 03:44:56,866] : 172.17.0.1 - - [18/Aug/2021 03:44:56] "GET /1 HTTP/1.1" 200 -
+INFO werkzeug [2021-08-18 03:44:58,861] : 172.17.0.1 - - [18/Aug/2021 03:44:58] "GET / HTTP/1.1" 200 -
+INFO werkzeug [2021-08-18 03:45:03,406] : 172.17.0.1 - - [18/Aug/2021 03:45:03] "GET /3 HTTP/1.1" 200 -
+INFO app [2021-08-18 03:45:07,917] : Metrics request successful
+INFO werkzeug [2021-08-18 03:45:07,917] : 172.17.0.1 - - [18/Aug/2021 03:45:07] "GET /metrics HTTP/1.1" 200 -
+INFO app [2021-08-18 03:45:27,944] : Healthz Status request successfull
+INFO werkzeug [2021-08-18 03:45:27,944] : 172.17.0.1 - - [18/Aug/2021 03:45:27] "GET /healthz HTTP/1.1" 200 -
+INFO werkzeug [2021-08-18 03:46:27,077] : 172.17.0.1 - - [18/Aug/2021 03:46:27] "GET /8 HTTP/1.1" 404 -
+INFO app [2021-08-18 03:46:30,208] : Healthz Status request successfull
+INFO werkzeug [2021-08-18 03:46:30,209] : 172.17.0.1 - - [18/Aug/2021 03:46:30] "GET /healthz HTTP/1.1" 404 -
+INFO app [2021-08-18 03:46:38,865] : Metrics request successful
+INFO werkzeug [2021-08-18 03:46:38,865] : 172.17.0.1 - - [18/Aug/2021 03:46:38] "GET /metrics HTTP/1.1" 500 -
