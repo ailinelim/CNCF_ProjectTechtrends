@@ -17,8 +17,12 @@ resources:
     requests:
         cpu: 250m
         memory: 64Mi
-containerPort: 3111
+ports:
+  containerPort: 3111
+  protocol: TCP
 livenessProbe:
-            path: /healthz
+  path: /healthz
+  port: 3111
 readinessProbe:
-            path: /healthz
+  path: /healthz
+  port: 3111

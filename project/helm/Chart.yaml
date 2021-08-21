@@ -2,8 +2,8 @@ apiVersion: v1
 name: techtrends 
 description: Project TechTrends
 keywords:
-    - techtrends
+- techtrends
 version: 1.0.0
 maintainers:
-    - name: ailinelim 
-      email: ailine.lim@openet.com
+- name: ailinelim 
+  email: ailine.lim@openet.com
