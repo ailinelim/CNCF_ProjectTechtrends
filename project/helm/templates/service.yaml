@@ -12,5 +12,4 @@ spec:
     targetPort: 3111
   selector:
     app: techtrends
-    tag: techtrends
   type: ClusterIP
