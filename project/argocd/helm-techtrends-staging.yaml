@@ -11,7 +11,8 @@ spec:
   source:
     helm:
       valueFiles:
-        - values-staging.yaml
+      - values-staging.yaml
     path: project/helm
     repoURL: https://github.com/ailinelim/CNCF_ProjectTechtrends
     targetRevision: HEAD
+  syncPolicy: {}
