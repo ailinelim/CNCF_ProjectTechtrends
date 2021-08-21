@@ -11,4 +11,4 @@ RUN pip install -r requirements.txt
 RUN python init_db.py 
 
 # execute command  on the container start
-CMD ["python" , "app.py"]
+CMD [ "python", "app.py" ]
