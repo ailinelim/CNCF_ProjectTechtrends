@@ -2,7 +2,7 @@ FROM python:3.9
 LABEL maintainer="Ailine Lim"
 
 # Copy local code to the container image.
-COPY /techtrends/. /app
+COPY techtrends/. /app
 WORKDIR /app
 EXPOSE 3111
 
