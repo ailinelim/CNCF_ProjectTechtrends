@@ -4,9 +4,9 @@ metadata:
   labels:
     app: techtrends
   name: techtrends
-  namespace: sandbox
+  namespace: {{ .Values.namespace.name }}
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicasCount }}
   selector:
     matchLabels:
       app: techtrends
@@ -20,7 +20,7 @@ spec:
         app: techtrends
     spec:
       containers:
-        - image: ailinelim/techtrends:latest
+        - image: {{ .Values.image.repository }}:{{ .Values.image.tag}}
           imagePullPolicy: IfNotPresent  
           name: techtrends
           resources:
@@ -31,13 +31,13 @@ spec:
               memory: 128Mi
               cpu: 500m
           ports:
-            - containerPort: 3111
-              protocol: TCP
+            - containerPort: {{ .Values.ports.containerPort }}
+              protocol: {{ .Values.ports.protocol }}
           livenessProbe:
             httpGet:
-              path: /healthz
-              port: 3111
+              path: {{ .Values.livenessProbe.path }}
+              port: {{ .Values.livenessProbe.port }}
           readinessProbe:
             httpGet:
-              path: /healthz
-              port: 3111 
+              path: {{ .Values.readinessProbe.path }}
+              port: {{ .Values.readinessProbe.port }}
