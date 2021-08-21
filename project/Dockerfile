@@ -2,8 +2,8 @@ FROM python:3.9
 LABEL maintainer="Ailine Lim"
 
 # Copy local code to the container image.
+COPY project/techtrends /app
 WORKDIR /app
-COPY techtrends .
 EXPOSE 3111
 
 # use pip to install any application dependencies 
