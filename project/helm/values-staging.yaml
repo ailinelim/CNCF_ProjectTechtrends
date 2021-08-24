@@ -2,8 +2,6 @@ namespace:
   name: staging
 service:
   port: 5111
-image:
-  pullPolicy: Always
 replicaCount: 3
 resources:
   limits:
