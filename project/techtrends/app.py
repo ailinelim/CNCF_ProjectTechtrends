@@ -56,7 +56,7 @@ def healthz():
         )
 
     ## log line
-    app.logger.info('Healthz Status request successfull')
+    app.logger.info('Healthz Status request successful')
     return response
 
 # Define Metrics checking on db connection
@@ -79,8 +79,12 @@ def metrics():
 def post(post_id):
     post = get_post(post_id)
     if post is None:
+      ## log line
+      app.logger.info('Article with id = "{0}" does not exist.'.format(post_id))  
       return render_template('404.html'), 404
     else:
+      ## log line
+      app.logger.info('Article with id = "{0}" retrieved!'.format(post['title']))  
       return render_template('post.html', post=post)
 
 # Define the About Us page
