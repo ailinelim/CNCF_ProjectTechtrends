@@ -4,7 +4,7 @@ service:
   port: 5111
 replicaCount: 3
 image:
-  pullPolicy: Always
+  pullPolicy: IfNotPresent
 resources:
   limits:
     cpu: 500m
