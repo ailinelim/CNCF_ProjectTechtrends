@@ -19,7 +19,6 @@ def get_db_connection():
 
 # Function to get a post using its ID
 def get_post(post_id):
-    global post
     connection = get_db_connection()
     post = connection.execute('SELECT * FROM posts WHERE id = ?',
                     (post_id,)).fetchone()
@@ -33,6 +32,7 @@ app.config['SECRET_KEY'] = 'your secret key'
 # Define the main route of the web application 
 @app.route('/')
 def index():
+    global posts
     connection = get_db_connection()
     posts = connection.execute('SELECT * FROM posts').fetchall()
     connection.close()
@@ -63,15 +63,8 @@ def healthz():
 @app.route('/metrics')
 def metrics():
 # Get db connection status
-    if post is None:
         response = app.response_class(
-        response=json.dumps({"status":"ERROR - Not found"}),
-            status=500,
-            mimetype='application/json'
-        )
-    else:
-        response = app.response_class(
-        response=json.dumps({"status":"success","code":0,"data":{"db_connection_count":dbconn_COUNTER,"post_count":len(post)}}),
+        response=json.dumps({"status":"success","code":0,"data":{"db_connection_count":dbconn_COUNTER,"post_count":len(posts)}}),
             status=200,
             mimetype='application/json'
         )
